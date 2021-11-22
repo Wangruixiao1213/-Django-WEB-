@@ -22,7 +22,7 @@
 
 ## 环境配置
 
-- 项目制作选择了 Anaconda 的 root 环境， 确保python环境中安装了django、tensorflow、numpy、opencv、pymysql、threading、winsound、os、time、smtplib、emai等必要包
+- 项目制作选择了 Anaconda 的 root 环境， 确保python环境中安装了django、tensorflow、numpy、opencv、pymysql、threading、winsound、os、time、smtplib、email等必要包
 
 
 
