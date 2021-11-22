@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>人脸口罩识别系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href={% static "css/style.css" type="text/css" media="all" %} />
+</head>
+
+<body>
+    <div class="w3l-signinform">
+        <div class="wrapper">
+            <!-- main content -->
+            <div class="w3l-form-info">
+                <div class="w3_info">
+                    <h1>基于xx的人脸口罩识别注册系统</h1>
+                    <p class="sub-para">小组成员：xx xx xx xx</p>
+                    <h2>Register</h2>
+                    <form name="myform"  action="save" method="get">
+                        <div class="input-group">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input type="text" name="username" placeholder="Username" required="">
+                        </div>
+                        <div class="input-group">
+                            <span><i class="fa fa-key" aria-hidden="true"></i></span>
+                            <input type="Password" name="password" placeholder="Password" required="">
+                        </div>
+                        <div class="input-group">
+                        <span><i class="fa fa-email" aria-hidden="true"></i></span>
+                            <input type="email" name="email" placeholder="Email" required="">
+                        </div>
+                        <button class="btn btn-primary btn-block" type="submit" name="submit1" value="注册">注册</button>
+                    </form>
+
+                    <p class="account">已经有账号了？ <a href={% url "login" %}>去登陆</a></p>
+                </div>
+            </div>
+            <!-- //main content -->
+        </div>
+        <!-- //container -->
+        <!-- footer -->
+        <div class="footer">
+
+        </div>
+        <!-- footer -->
+    </div>
+
+</body>
+
+</html>

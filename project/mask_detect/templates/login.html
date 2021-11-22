@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>人脸口罩识别系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href={% static "css/style.css" %} type="text/css" media="all" />
+
+
+</head>
+
+<body>
+    <div class="w3l-signinform">
+        <!-- container -->
+        <div class="wrapper">
+            <!-- main content -->
+            <div class="w3l-form-info">
+                <div class="w3_info">
+                    <h1>人脸口罩识别系统</h1>
+                    <p class="sub-para">小组成员</p>
+                    <h2>Log In</h2>
+                    <form name="myform" onsubmit="return validateform" action="query" method="get">
+                        <div class="input-group">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <input type="text" name="username" placeholder="Username" required="">
+                        </div>
+                        <div class="input-group two-groop">
+                            <span><i class="fa fa-key" aria-hidden="true"></i></span>
+                            <input type="Password" name="password" placeholder="Password" required="">
+                        </div>
+                        <div class="form-row bottom">
+                            <a href= {% url "forget" %} class="forgot">Forgot password?</a>
+                        </div>
+                        <button class="btn btn-primary btn-block" type="submit" name="submit1">登录</button>
+                    </form>
+                
+                    <p class="account">还没有账号? <a href={% url "register" %}>去注册</a></p>
+                </div>
+            </div>
+            <!-- //main content -->
+        </div>
+        <!-- //container -->
+        <!-- footer -->
+        <div class="footer">
+            
+        </div>
+        <!-- footer -->
+    </div>
+
+</body>
+
+</html>
