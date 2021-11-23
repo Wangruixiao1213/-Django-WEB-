@@ -1,1 +1,2 @@
 python manage.py runserver 0.0.0.0:8000
+python3 manage.py runserver 0.0.0.0:8000 # 同时存在python2.x与python3.x执行这个
