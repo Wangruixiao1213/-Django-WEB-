@@ -1,4 +1,5 @@
 # import the necessary packages
+import win32con
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
@@ -9,6 +10,7 @@ import winsound
 from threading import Thread
 import os
 import time
+import win32gui
 
 def task():
     winsound.Beep(600, 100)
@@ -139,7 +141,14 @@ if __name__ == '__main__':
         # imgName = "static/photo/frame.jpg"
         # cv2.imwrite(imgName,frame)
 
-        cv2.imshow("Mask Detect", frame)
+        # 获取处理后的最终frame
+        WindowName = "Mask Detect"
+        cv2.imshow(WindowName, frame)
+
+        # 将cv2的窗口置顶
+        hwnd = win32gui.FindWindow(None,WindowName)
+        CVRECT = cv2.getWindowImageRect(WindowName)
+        win32gui.SetWindowPos(hwnd,win32con.HWND_TOPMOST, 0, 0 , CVRECT[2], CVRECT[3], win32con.SWP_SHOWWINDOW)
         key = cv2.waitKey(1) & 0xFF
         # 监控键盘输入 只要输入q 无论大小写直接退出窗口
         if key == ord("q") or key == ord("Q"):
