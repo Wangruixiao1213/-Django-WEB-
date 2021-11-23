@@ -146,9 +146,9 @@ if __name__ == '__main__':
         cv2.imshow(WindowName, frame)
 
         # 将cv2的窗口置顶
-        hwnd = win32gui.FindWindow(None,WindowName)
-        CVRECT = cv2.getWindowImageRect(WindowName)
-        win32gui.SetWindowPos(hwnd,win32con.HWND_TOPMOST, 0, 0 , CVRECT[2], CVRECT[3], win32con.SWP_SHOWWINDOW)
+        # hwnd = win32gui.FindWindow(None,WindowName)
+        # CVRECT = cv2.getWindowImageRect(WindowName)
+        # win32gui.SetWindowPos(hwnd,win32con.HWND_TOPMOST, 0, 0 , CVRECT[2], CVRECT[3], win32con.SWP_SHOWWINDOW)
         key = cv2.waitKey(1) & 0xFF
         # 监控键盘输入 只要输入q 无论大小写直接退出窗口
         if key == ord("q") or key == ord("Q"):
