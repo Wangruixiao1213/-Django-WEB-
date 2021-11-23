@@ -24,6 +24,9 @@ from Userlogin.views import *
 
 urlpatterns = [
     url(r'^$', login),
+    # 默认网址下配置登录功能
+    path('save/',save),
+    path('query/',query),
     path('admin/', admin.site.urls),
     path('login/',login,name='login'),
     path('register/',register,name='register'),
