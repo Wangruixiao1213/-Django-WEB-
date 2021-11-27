@@ -39,7 +39,6 @@ def index(request):
     else:
         return HttpResponseRedirect('/login/')
 
-
 def send(request):
     a = request.GET
     eMail = a.get('email')
@@ -62,6 +61,7 @@ def find(request):
         username = ''
         passwd = ''
         i = 0
+        has_regiter = 0
         while i < len(all_users):
             if emailUser in all_users[i]:
                 ##表示该邮箱已经存在
