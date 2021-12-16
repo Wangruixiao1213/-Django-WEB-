@@ -40,8 +40,8 @@ def index(request):
         return HttpResponseRedirect('/login/')
 
 def send(request):
-    a = request.GET
-    eMail = a.get('email')
+    get_msg = request.GET
+    eMail = get_msg.get('email')
     global emailUser
     emailUser = eMail
     global verifi

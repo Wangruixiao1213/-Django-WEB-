@@ -1,5 +1,16 @@
-from PyInstaller.__main__ import run
-if __name__ == '__main__':
-    # 尝试生成exe文件 但尝试了多种方法 生成后的exe文件还是无法运行 故选择放弃
-    opts = ['detect_mask_video.py','-D']
-    run(opts)
+def sendmail(msg_to,verification):
+    msg_from = '847573508@qq.com'
+    passwd = 'rosddzicgslubaij'
+    # msg_to = '2019141460130@stu.scu.edu.cn'
+
+    subject = "找回账号密码"
+    content = "你的验证码为" + verification
+    msg = MIMEText(content)
+    msg['Subject']= subject
+    msg['From'] = msg_from
+    msg['To'] = msg_to
+
+    s = smtplib.SMTP_SSL('smtp.qq.com',465)
+    s.login(msg_from,passwd)
+    s.sendmail(msg_from,msg_to,msg.as_string())
+    print("succeed")

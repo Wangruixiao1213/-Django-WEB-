@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Userlogin',
     'maskDetect',
 ]
+# 设置默认登录的url 即 139.196.188.208/login为默认登录网址
 LOGIN_URL = '/login/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,6 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mask_detect.urls'
 
+# 设置模板文件夹信息 其中template文件夹中放置静态的HTML代码
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

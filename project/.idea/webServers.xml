@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="13b324a4-8e3e-4b4e-a89f-cd026e3f89c5" name="maskdetector" url="http://139.196.188.226">
+        <fileTransfer rootFolder="/root" accessType="SFTP" host="139.196.188.226" port="22" sshConfigId="e1fc2d14-5039-49df-98f5-69f75139005e" sshConfig="root@139.196.188.226:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
