@@ -9,7 +9,7 @@ import cv2
 import winsound
 from threading import Thread
 from temper.temper import temperView
-import pymysql
+
 def task():
     winsound.Beep(600, 100)
 
@@ -28,8 +28,8 @@ faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 maskNet = load_model("static/model/mask_detector.model")
 
 # 接数据库 这里连接的是mysql数据库 因为是个人电脑 所以没设置密码 连的是主机 其中存放的信息只有一张user表 对应账号密码邮箱 用于登陆处理
-conn = pymysql.connect(host='localhost',port=3306,user='root',passwd='',db='maskdetector')
-cur = conn.cursor()
+# conn = pymysql.connect(host='localhost',port=3306,user='root',passwd='',db='maskdetector')
+# cur = conn.cursor()
 # login实现登录  ** login代码修改到了views.py中
 # def login():
 

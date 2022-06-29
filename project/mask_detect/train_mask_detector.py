@@ -21,7 +21,7 @@ import numpy as np
 import os
 
 INIT_LR = 1e-4#学习率设置
-EPOCHS = 10#定型周期数量
+EPOCHS = 20#定型周期数量
 # batch size
 BS = 32#单次训练所抓取的数据亮量
 
@@ -72,7 +72,7 @@ aug = ImageDataGenerator(
 	height_shift_range=0.2,#垂直平移范围
 	shear_range=0.15,#透视变换的范围
 	horizontal_flip=True,#水平反转
-	fill_mode="nearest")#填充模式
+	fill_mode="nearest")#填充模式q
 
 # 载入MobileNetV2模型作为基础模型
 # left off
